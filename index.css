@@ -1,16 +1,122 @@
+
+
 body {
-	background-color: #B2E9FD;
+	background-color:black; 
+	
+	
+	width: 100vw; 
+	height: 100vh;
+	
+} 
+.container{ 
+	display: flex; 
+	flex-direction: column;
+	align-items: center; 
+	
 }
 
-.header h2 {
-	color: #DC4247;
-}
 
-.header p {
-	color: #50524F;
+.header h2 { 
+	font-family:"Carter One" ;
+	color: #FFDD33 ;
+	width: 100vw; 
+	height: 200px; 
+	font-weight: bold; 
+	text-align: right; 
+	background-color: rgba(244, 208, 63,.1);}
+
+p {
+	color: #FFDD33 ;
+	font-family: "Oswald"; 
+	font-size: 20px; 
+	text-align: right;
+} 
+hr { 
+	width: 70vw; 
+	border: solid black 20px;
+	
+	background-color: black;
 }
 
 .results {
 	margin-top: 20px;
 }
 
+#header-portion{
+	/* background-color: black;  */
+	width: 100vw; 
+	padding-bottom: 20px;
+}
+
+.movies-container{ 
+	background-color:rgba(0, 0, 1,.1);
+	width: auto; 
+	height:auto; 
+	display: flex;
+	flex-direction: row; 
+	justify-content: space-around;  
+	flex-wrap: wrap;
+	align-items: center; 
+	
+}
+
+.movie{ 
+	width: 200px; 
+	height: 375px; 
+	 
+	display: flex;
+	flex-direction: column; 
+	justify-content: center; 
+	align-items: center; 
+	margin: 10px; 
+	border-color: black; 
+	border-style: solid; 
+	border-width: 10px;
+} 
+button { 
+	background-color: rgba(251, 0, 0,.7) ; 
+	width: 50px; 
+	
+	
+} 
+.posters { 
+width: 150px;
+height: 245px;} 
+
+.movie-title{ 
+	font-family: "Carter One"; 
+	color: black; 
+	text-align: center;
+} 
+
+.release-date{ 
+	font-family: "Open Sans"; 
+	color: black; 
+	font-size: 8px;
+} 
+.typeOf{ 
+	font-size: xx-small; 
+	font-family: "Open Sans"; 
+	color: black;
+}
+
+.searchMessage{ 
+	font-family: "Carter One"; 
+	color: #D62222; 
+	background-color: black; 
+	font-size: 100px; 
+	text-align: center;
+} 
+
+#searchMe{
+	font-size: 20px; 
+	width: 1700px; 
+	background-color: rgba(251, 0, 0,.7) ; 
+	border: none; 
+	font-family: "Oswald"; 
+	font-weight: bold;
+} 
+#search-form{ 
+	width: 700px; 
+	font-family: "Oswald";
+}
