@@ -6,11 +6,11 @@ let watchListContainer = document.getElementById("myWatchListContainer")
 
 watchList.forEach(function(film){ 
 
-  axios.get(`http://www.omdbapi.com/?apikey=bb36bae1&i=${film}`).then(data=>{ 
+  axios.get(`https://www.omdbapi.com/?apikey=bb36bae1&i=${film}`).then(data=>{ 
     
 
    let movie = document.createElement("div");  
-   let myWatchListMovie= (`http://www.omdbapi.com/?apikey=bb36bae1&i=${film}`) 
+   let myWatchListMovie= (`https://www.omdbapi.com/?apikey=bb36bae1&i=${film}`) 
    console.log(data.data.Title)
   movie.classList.add("movie");  
   let poster = document.createElement("img") 

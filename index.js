@@ -66,7 +66,7 @@ function createMovieInfo(currentMovie){
         let searchString = $("#search-form").val();  
         
         const urlEncodedSearchString = encodeURIComponent(searchString)
-        axios.get("http://www.omdbapi.com/?apikey=bb36bae1&s="+ urlEncodedSearchString
+        axios.get("https://www.omdbapi.com/?apikey=bb36bae1&s="+ urlEncodedSearchString
         ).then( function(response) {
              
            let movieSearchArray = response.data.Search;  
