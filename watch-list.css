@@ -1,0 +1,117 @@
+
+#title-text { 
+	font-family:"Teko" ; 
+	letter-spacing: 5px;
+	color: white ;
+	/* font-weight: bold;  */
+	text-align: left;  
+	font-size: 50px; 
+	
+}   
+#navigation-bar { 
+	background-color:#080808; 
+	padding-bottom: 40px;
+} 
+#nav-link { 
+	color: white; 
+	font-family: "Teko"; 
+	letter-spacing: 5px;
+} 
+#searchMe{
+	font-size: 15px; 
+	width: 100px;
+	height: 40px;
+	background-color:#a8a9ad;
+	border: none; 
+	font-family: "Teko"; 
+	font-weight: bold; 
+	color:white;
+	display: flex; 
+	flex-direction: row; 
+	justify-content: center; 
+	
+} 
+#search-form{ 
+	width: 200px; 
+	font-family: "Teko"; 
+} 
+
+body { background-image: url(black\ stars.gif); 
+
+    justify-content: center;
+	width: 100vw; 
+	height: 100vh; 
+}  
+
+#main-content{  
+margin-top: 70px;
+background-color: black;  
+height:auto;
+display: flex; 
+flex-direction: row; 
+justify-content: right;
+
+} 
+
+#myWatchList{ 
+    font-size: 20px;
+    color: white;
+    font-family: "Teko";
+    background-color: cornflowerblue; 
+    letter-spacing: normal; 
+    writing-mode: vertical-lr;
+    text-orientation: upright; 
+    width: 40px; 
+    font-stretch: extra-expanded;
+	text-align: center;
+} 
+
+.posters { 
+	width: 150px;
+	height: 245px; 
+	transition: top ease 0.5s; 
+	position: relative; 
+	top: 0;
+	}   
+
+.posters:hover{ 
+		top: -20px;  
+		opacity: .5;  
+		filter: grayscale("yellow");
+	
+	}  
+
+	.movie-title{ 
+		font-family: "Teko"; 
+		color: white; 
+		text-align: center;
+	} 
+	
+	.release-date{ 
+		font-family: "Teko"; 
+		color: black; 
+		font-size: 8px;
+	} 
+	.typeOf{ 
+		font-size: xx-small; 
+		font-family: "Teko"; 
+		color: black;
+	} 
+
+	#myWatchListContainer{ 
+
+		width: auto; 
+		height:calc(auto); 
+		display: flex;
+		flex-direction: row; 
+		justify-content: space-around;  
+		flex-wrap: wrap;
+		align-items: center;  
+		align-content: space-between;
+	
+		background-color:#080808;  
+		margin: 60px; 
+	
+		/* opacity: .7; */
+		
+	}

@@ -8,19 +8,41 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="watch-list.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Gloria+Hallelujah&family=Luckiest+Guy&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Righteous&family=Teko&display=swap" rel="stylesheet">
   </head>
   <body> 
+    <nav id="navigation-bar" class="navbar navbar-expand-lg navbar-light ">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a id="title-text" class="navbar-brand" href="index.html">Scene.It</a>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a id="nav-link" class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a id = "nav-link" class="nav-link" href="watch-list.html">myWatchList</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-link" class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Coming Soon</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input id="search-form" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button id="searchMe"  class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
 
     <div class="container"> 
       <div id="header-portion">
         <div class="row">
-          <div class="col-12 header text-center">
-            <h2 class="display-2">SCENE*IT</h2> 
-            <hr>
-            <p>Search for movies you want to watch.</p>
-            <p>Save them to your list</p> 
+          
+            
             
           </div>  
       </div>
@@ -28,12 +50,7 @@
       </div>
       <div class="row">
         <div class="col-12 search">
-          <form id="search-form">
-            <div class="input-group input-group-lg">
-              <input class="form-control search-bar" placeholder="Search for a movie..."/>
-              <button id="searchMe" class="btn btn-primary input-group-btn" >
-                Search
-              </button>
+        
             </div>
           </form>
         </div>
@@ -43,9 +60,9 @@
           <!-- MOVIES SHOW UP HERE! --> 
 
           
-
+<div id="myWatchList"> myWatchList </div>
         
-
+<div id="myWatchListContainer"> </div>
 
 
 
@@ -78,7 +95,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="data.js"></script> -->
+    <script type="module" src="watch-list.js"></script> 
     <script src="data.js"></script>
-    <script src="watch-list.js"></script>
   </body>
 </html>

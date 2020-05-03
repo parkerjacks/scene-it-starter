@@ -30,32 +30,22 @@ function createMovieInfo(currentMovie){
     let addToWatchList = document.createElement("button")
     addToWatchList.textContent = "+"  
     addToWatchList.addEventListener("click",e=>{   
-        console.log(currentMovie)
-    
+        
         const movie = currentMovie.imdbID;
-        console.log(movie) 
+
         if (watchList.includes(movie)){ 
             console.log("This movie is already in users, WatchList")
         } 
         else{
         watchList.push(movie)   
-        console.log(localStorage) 
+
         let watchListJSON = JSON.stringify(watchList) 
-        console.log(watchListJSON)
         watchList = JSON.parse(watchListJSON) 
         localStorage.setItem("watchList", watchListJSON)
         watchListJSON = localStorage.getItem("watchList") 
-        console.log(watchListJSON)}
-        
-        // if (watchList === null){ 
-        //     watchList = []
-        // }  
-
-         
         
         
-        
-    })
+    }})
     movie.appendChild(poster)
     movie.appendChild(movieTitle) 
     movie.appendChild(releaseDate) 
@@ -70,19 +60,25 @@ function createMovieInfo(currentMovie){
     let searchContainer = document.querySelector("input") 
     let searchMe = document.getElementById("searchMe") 
     
-    
+    let logo = document.getElementById("logo")
     function runTheSearch(e){  
-        e.preventDefault() 
-        if(searchContainer.value == "movie"){ 
-            movieContainer.textContent = ""
-            let saying = document.createElement("p") 
-            saying.classList.add("searchMessage")
-            saying.textContent="Ohhh, this is my favorite!! Hold On, let me grab the Popcorn!🍿" 
-            movieContainer.appendChild(saying) 
-            movieContainer.style.backgroundColor = "black"
+        e.preventDefault()   
+        let searchString = $("#search-form").val();  
+        
+        const urlEncodedSearchString = encodeURIComponent(searchString)
+        axios.get("http://www.omdbapi.com/?apikey=bb36bae1&s="+ urlEncodedSearchString
+        ).then( function(response) {
+             
+           let movieSearchArray = response.data.Search;  
+          
+           movieContainer.innerHTML=""
+           movieSearchArray.forEach(
+               createMovieInfo
+           )})
+           
+                
+            
+
         }
-        else{ 
-            console.log("Error")
-        }
-    }
+    
     searchMe.addEventListener("click",runTheSearch) 
